@@ -1,4 +1,4 @@
-## [In process](https://youtu.be/KxqlJblhzfI?t=2178)
+## [In process](https://youtu.be/KxqlJblhzfI?t=2784)
 
 ```text
 spring-boot-starter-data-jpa
@@ -56,5 +56,20 @@ public class User implements UserDetails {
 ```java
 public interface UserRepository extends JpaRepository<User, Integer> { 
   //  ... 
+}
+```
+
+3. `JwtAuthenticationFilter`
+```java
+@Component
+public class JwtAuthenticationFilter extends OncePerRequestFilter {
+  @Override
+  protected void doFilterInternal(
+    @NonNull HttpServletRequest request,
+    @NonNull HttpServletResponse response,
+    @NonNull FilterChain filterChain)
+    throws ServletException, IOException {
+    // ...
+  }
 }
 ```
