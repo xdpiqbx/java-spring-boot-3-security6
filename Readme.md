@@ -1,4 +1,4 @@
-## [In process](https://youtu.be/KxqlJblhzfI?t=2927)
+## [In process](https://youtu.be/KxqlJblhzfI?t=4069)
 
 ```text
 spring-boot-starter-data-jpa
@@ -73,3 +73,24 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
   }
 }
 ```
+
+4.
+```xml
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-api</artifactId>
+    <version>0.11.5</version>
+</dependency>
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-impl</artifactId>
+    <version>0.11.5</version>
+</dependency>
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-jackson</artifactId>
+    <version>0.11.5</version>
+</dependency>
+```
+
+5. Create `public class JwtService {...}`
