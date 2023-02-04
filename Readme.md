@@ -1,4 +1,4 @@
-## [In process](https://youtu.be/KxqlJblhzfI?t=4069)
+## [In process](https://youtu.be/KxqlJblhzfI?t=6204)
 
 ```text
 spring-boot-starter-data-jpa
