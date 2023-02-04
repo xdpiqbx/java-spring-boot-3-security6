@@ -94,3 +94,19 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 ```
 
 5. Create `public class JwtService {...}`
+
+```java
+@Service
+public class JwtService {
+  private static final String SECRET_KEY = "secret";
+  public String extractUserName(String token) {...}
+  public <T> T extractClaim(String token, Function<Claims, T> claimsResolver){...}
+  public String generateToken(UserDetails userDetails) {...}
+  public String generateToken(Map<String, Object> extraClaims, UserDetails userDetails){...}
+  public boolean isTokenValid(String token, UserDetails userDetails){...}
+  private boolean isTokenExpired(String token) {...}
+  private Date extractExpiration(String token) {...}
+  private Claims extractAllClaims(String token){...}
+  private Key getSignInKey() {...}
+}
+```
