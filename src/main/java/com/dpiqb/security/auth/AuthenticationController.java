@@ -14,7 +14,7 @@ public class AuthenticationController {
     // TODO
   }
   @PostMapping("/authenticate")
-  public ResponseEntity<AuthenticationResponse> register(@RequestBody AuthenticationRequest request){
+  public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest request){
     // TODO
   }
 }

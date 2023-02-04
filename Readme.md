@@ -1,5 +1,10 @@
 ## [In process](https://youtu.be/KxqlJblhzfI?t=6204)
 
+If you need container run:
+```command
+docker compose up -d
+```
+
 ```text
 spring-boot-starter-data-jpa
 spring-boot-starter-security
@@ -110,3 +115,19 @@ public class JwtService {
   private Key getSignInKey() {...}
 }
 ```
+
+Create `AuthenticationController`
+```java
+@RestController
+@RequestMapping("/api/v1/auth")
+public class AuthenticationController {
+  @PostMapping("/register")
+  public ResponseEntity<AuthenticationResponse> register(@RequestBody RegisterRequest request){...}
+  @PostMapping("/authenticate")
+  public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest request){...}
+}
+```
+
+Create `AuthenticationResponse`
+Create `RegisterRequest`
+Create `AuthenticationRequest`
